@@ -55,7 +55,7 @@ class Lottery extends Component {
     }
 
     glance() {
-        const INTERVAL = 120;
+        const INTERVAL = 256;
 
         this.timer = setInterval(() => {
             const parallel = this.props.parallel;
