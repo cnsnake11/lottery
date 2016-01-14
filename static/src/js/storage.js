@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'lottery';
+const STORAGE_KEY = 'play';
 
 /**
  * 获取已经中奖用户信息数组

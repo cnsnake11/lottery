@@ -9,7 +9,7 @@ let config = {
     title: 'Study Koa',
     env: 'production',
     appName: 'Study Koa',
-    port: 18080,
+    port: 18081,
     viewDir: path.join(__dirname, '..', 'view'),
     commonDir: path.join(__dirname, '..', 'common'),
     logDir: path.join(__dirname, '..', 'log'),
