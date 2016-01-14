@@ -57,6 +57,8 @@ class Lottery extends Component {
     glance() {
         const INTERVAL = 256;
 
+        this.refs.bg.play();
+
         this.timer = setInterval(() => {
             const parallel = this.props.parallel;
             const payload = [];
@@ -77,6 +79,9 @@ class Lottery extends Component {
         for (let i = 0; i < parallel; i += 1) {
             payload.push(this.random(true, payload));
         }
+
+        this.refs.bg.pause();
+        this.refs.bingo.play();
         this.props.dispatch(raffle(payload));
     }
 
@@ -154,6 +159,19 @@ class Lottery extends Component {
             <div>
                 <link rel="stylesheet" href="less/lottery.css" />
                 <Background />
+                <audio
+                    ref="bg"
+                    preload="auto"
+                    volume="1"
+                    loop
+                    src="audio/bg.mp3"
+                />
+                <audio
+                    ref="bingo"
+                    preload="auto"
+                    volume="1"
+                    src="audio/bingo.wav"
+                />
                 <Copyleft />
                 <Board
                     prizes={this.props.prizes}
