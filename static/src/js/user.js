@@ -3,9 +3,10 @@ $(function () {
         e.preventDefault();
     }).tooltip({
         trigger: 'hover',
+        placement: 'auto',
         html: true,
         title: function (e) {
-            return $($(this).html()).attr('class', 'img-rounded');
+            return $($(this).html()).attr('class', 'img-rounded img-responsive');
         },
     });
 });

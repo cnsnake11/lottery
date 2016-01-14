@@ -36,7 +36,6 @@ export default class User extends Component {
                                                 href={user.image}
                                                 target="_blank"
                                                 data-toggle="tooltip"
-                                                data-placement="bottom"
                                             >
                                                     <img src={user.image} className="img-thumbnail" />
                                             </a>
