@@ -170,7 +170,7 @@ class Lottery extends Component {
                     ref="bingo"
                     preload="auto"
                     volume="1"
-                    src="audio/bingo.wav"
+                    src="audio/bingo.mp3"
                 />
                 <Copyleft />
                 <Board
