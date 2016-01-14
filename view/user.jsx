@@ -21,6 +21,7 @@ export default class User extends Component {
                                 <th>序号</th>
                                 <th>部门</th>
                                 <th>姓名</th>
+                                <th>参与抽奖</th>
                                 <th>手机号</th>
                             </tr>
                         </thead>
@@ -41,6 +42,7 @@ export default class User extends Component {
                                             </a>
                                             {user.name}
                                         </td>
+                                        <td>{user.enable ? '是' : '否'}</td>
                                         <td>{user.phone}</td>
                                     </tr>
                                 );
@@ -65,5 +67,6 @@ User.propTypes = {
         name: PropTypes.string.isRequired,
         phone: PropTypes.string.isRequired,
         image: PropTypes.string.isRequired,
+        enable: PropTypes.bool.isRequired,
     }).isRequired).isRequired,
 };
