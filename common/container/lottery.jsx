@@ -36,7 +36,7 @@ class Lottery extends Component {
             target.prize = this.props.selectedPrize.key;
         }
 
-        if (skipIsRaffled && users[index].prize) {
+        if (skipIsRaffled && (users[index].prize || !users[index].enable)) {
             return this.random(skipIsRaffled, willDisplayUsers);
         }
 
